@@ -1,0 +1,57 @@
+@model FoodTruck
+
+<partial name="_DashboardLinks"></partial>
+
+<div class="container mt-5">
+    <form asp-controller="FoodTrucks" asp-action="Create" method="POST">
+        <fieldset class="border p-3">
+            <legend class="w-auto">
+                New Foodtruck
+            </legend>
+
+            <div class="form-group row">
+                <label asp-for="Name" class="col-sm-2 col-form-label">
+                    Name
+                    <span asp-validation-for="Name" class="text-danger font-weight-bold"></span>
+                </label>
+                <div class="col sm-1">
+                    <img src="https://image.flaticon.com/icons/png/512/45/45880.png" alt="Delivery Truck Icon" style="width: 75%;">
+                </div>
+                <div class="col-sm-9">
+                    <input asp-for="Name" class="form-control">
+                </div>
+            </div>
+            
+            <div class="form-group row">
+                <label asp-for="Style" class="col-sm-2 col-form-label">
+                    Style
+                    <span asp-validation-for="Style" class="text-danger font-weight-bold"></span>
+                </label>
+                <div class="col sm-1">
+                    <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fcdn4.iconfinder.com%2Fdata%2Ficons%2Fmultisizeicon-vol-03-1%2F512%2Fbaru-33-512.png&f=1&nofb=1" alt="Knife and Fork Icon" style="width: 75%;">
+                </div>
+                <div class="col-sm-9">
+                    <input asp-for="Style" class="form-control">
+                </div>
+            </div>
+            
+            <div class="form-group row">
+                <label asp-for="Description" class="col-sm-2 col-form-label">
+                    Description 
+                    <span asp-validation-for="Description" class="text-danger font-weight-bold"></span>
+                </label>
+                <div class="col sm-1">
+                    <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.shareicon.net%2Fdata%2F2015%2F09%2F19%2F643052_chat_512x512.png&f=1&nofb=1" alt="Quote Bubble Icon" style="width: 75%;">
+                </div>
+                <div class="col-sm-9">
+                    <textarea asp-for="Description" class="form-control" rows="13"></textarea>
+                </div>
+            </div>
+
+            <div class="text-right">
+                <a asp-controller="FoodTrucks" asp-action="Dashboard" class="btn btn-primary">Cancel</a>
+                <button class="btn btn-success">Submit</button>
+            </div>
+        </fieldset>
+    </form>
+</div>

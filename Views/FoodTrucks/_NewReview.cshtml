@@ -1,0 +1,54 @@
+@model Review
+
+@* none star left black &#11240; *@
+@* asp-route-foodTruckId="@ViewBag.FoodTruckId" is only needed if using the ViewBag approach instead of instantiating a review in Details.cshtml *@
+
+<div>
+    <form asp-controller="FoodTrucks" asp-action="ReviewTruck" asp-route-foodTruckId="@ViewBag.FoodTruckId" method="POST">
+        <div class="row">
+            @* left column with review body input box *@
+            <div class="col-md-6">
+                <div class="form-group row">
+                    <label asp-for="Body" class="col-sm-3 col-form-label">
+                        Review      <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.shareicon.net%2Fdata%2F2015%2F09%2F19%2F643052_chat_512x512.png&f=1&nofb=1" alt="Quote Bubble" style="width: 25%;">
+                        <span asp-validation-for="Body" class="text-danger font-weight-bold">
+                    </span>
+                    </label>
+                    <div class="col-sm-9">
+                        <textarea asp-for="Body" class="form-control" id="" cols="30" rows="10"></textarea>
+                    </div>
+                </div>
+            </div>
+            @* right column with stars select menu and buttons *@
+            <div class="col-md-6">
+                <div class="row">
+                    <div class="col-md-5">
+                        Rating      <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fimage.flaticon.com%2Ficons%2Fpng%2F512%2F25%2F25423.png&f=1&nofb=1" alt="Thumbs Up" style="width: 10%;">
+                    </div>
+                    <div class="col-md-7">
+                        <select class="d-block mb-5" asp-for="Rating">
+                            <option value="1">
+                                &#9733; &#9734; &#9734; &#9734; &#9734; 
+                            </option>
+                            <option value="2">
+                                &#9733; &#9733; &#9734; &#9734; &#9734; 
+                            </option>
+                            <option selected value="3">
+                                &#9733; &#9733; &#9733; &#9734; &#9734; 
+                            </option>
+                            <option value="4">
+                                &#9733; &#9733; &#9733; &#9733; &#9734; 
+                            </option>
+                            <option value="5">
+                                &#9733; &#9733; &#9733; &#9733; &#9733; 
+                            </option>
+                        </select>
+                        @* this is an anchor tag so that it won't submit the form *@
+                        <a asp-controller="FoodTrucks" asp-action="Dashboard" class="btn btn-primary">Cancel</a>
+                        <button class="btn btn-success">Submit</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
