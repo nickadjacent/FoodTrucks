@@ -22,7 +22,6 @@
 /Users/cthulhu/Documents/Dojo/C#/ORM/FoodTrucks/obj/Debug/netcoreapp2.2/FoodTrucks.csproj.CopyComplete
 /Users/cthulhu/Documents/Dojo/C#/ORM/FoodTrucks/bin/Debug/netcoreapp2.2/appsettings.Development.json
 /Users/cthulhu/Documents/Dojo/C#/ORM/FoodTrucks/bin/Debug/netcoreapp2.2/appsettings.json
-/Users/cthulhu/Documents/Dojo/C#/ORM/FoodTrucks/bin/Debug/netcoreapp2.2/Properties/launchSettings.json
 /Users/cthulhu/Documents/Dojo/C#/ORM/FoodTrucks/obj/Debug/netcoreapp2.2/Razor/Views/FoodTrucks/Dashboard.cshtml.g.cs
 /Users/cthulhu/Documents/Dojo/C#/ORM/FoodTrucks/obj/Debug/netcoreapp2.2/Razor/Views/FoodTrucks/Details.cshtml.g.cs
 /Users/cthulhu/Documents/Dojo/C#/ORM/FoodTrucks/obj/Debug/netcoreapp2.2/Razor/Views/FoodTrucks/Edit.cshtml.g.cs

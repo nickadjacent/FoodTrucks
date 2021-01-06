@@ -24,28 +24,21 @@
                 </p>
             </div>
             <div class="col-md-3 text-right">
-                @* asp-route-foodTruckId is adding a route parametel After the last hyphen needs to match the param name in the controller*@
+                @* asp-route-foodTruckId is adding a route parametel After the last hyphen needs to match the param name in
+                    the controller*@
                 @if (loggedInUserId == truck.UserId)
                 {
-                    <a
-                        asp-controller="FoodTrucks"
-                        asp-action="Edit"
-                        asp-route-foodTruckId="@truck.FoodTruckId"
-                        class="btn btn-primary"
-                    >
+                    <a asp-controller="FoodTrucks" asp-action="Edit" asp-route-foodTruckId="@truck.FoodTruckId"
+                        class="btn btn-outline-warning">
                         edit
                     </a>
                 }
 
-                <a
-                    asp-controller="FoodTrucks"
-                    asp-action="Details"
-                    asp-route-foodTruckId="@truck.FoodTruckId"
-                    class="btn btn-success"
-                >
-                    review
-                </a>
+                    <a asp-controller="FoodTrucks" asp-action="Details" asp-route-foodTruckId="@truck.FoodTruckId"
+                        class="btn btn-outline-success">
+                        review
+                    </a>
+                </div>
             </div>
-        </div>
     }
 </div>
